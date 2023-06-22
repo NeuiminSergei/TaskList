@@ -1,0 +1,23 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+body {
+  max-width: 1030px;
+  margin: 0 auto;
+  padding: 30px 15px;
+  font-family: sans-serif;
+  background-color: #F5F5F5;
+  color: #000;
+}
+
+:root {
+  --accent-color: #00b285
+}

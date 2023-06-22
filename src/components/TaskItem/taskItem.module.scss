@@ -1,0 +1,13 @@
+.taskItem {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &:not(:last-child){
+    margin-bottom: 10px;
+  }
+
+  .title {
+    margin-right: auto;
+  }
+}
