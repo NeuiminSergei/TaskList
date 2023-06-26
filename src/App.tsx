@@ -7,6 +7,8 @@ import { TaskPage } from './components/TaskPage/TaskPage'
 import { AddButton } from './components/UI/AddButton/AddButton'
 import { Modal } from './components/UI/Modal/Modal'
 import modal from './store/modal'
+import taskPage from './store/taskPage'
+import { DelBtn } from './components/UI/DelButton/DelBtn'
 
 export const App = observer(() => {
 
@@ -18,11 +20,12 @@ export const App = observer(() => {
       <div className={style.wrapper}>
         <TaskBlock>
           <div className={style.buttonWrapper}>
-            <AddButton />
+            <AddButton cName='addMargin' target='task' />
+            <DelBtn />
           </div>
           <TaskList></TaskList>
         </TaskBlock>
-        <TaskPage></TaskPage>
+        {taskPage.title !== '' && <TaskPage></TaskPage>}
       </div>
     </>
   )

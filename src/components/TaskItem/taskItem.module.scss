@@ -1,13 +1,36 @@
-.taskItem {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
+.itemWrapper {
 
-  &:not(:last-child){
-    margin-bottom: 10px;
+  .taskItem {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    svg {
+      transition: transform .1s ease-in-out;
+    }
+
+    &.open {
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    .title {
+      margin-right: auto;
+    }
   }
 
-  .title {
-    margin-right: auto;
+  .subtaskWrapper {
+    display: none;
+    padding-left: 10px;
+    margin-bottom: 10px;
+
+    &.open {
+      display: block;
+    }
   }
 }

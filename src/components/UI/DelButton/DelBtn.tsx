@@ -1,18 +1,14 @@
+import { observer } from 'mobx-react-lite'
 import tasks from '../../../store/tasks'
 import style from './delBtn.module.scss'
 
-interface IDelBtnProps {
-  title: string
-}
+export const DelBtn = observer(() => {
 
-export const DelBtn = ({ title }: IDelBtnProps) => {
-
-  const removeTask = (e: React.MouseEvent) => {
-    e.stopPropagation()
-    tasks.removeTask(title)
+  const removeTask = () => {
+    tasks.removeTask()
   }
 
   return (
     <button className={style.delBtn} onClick={removeTask}>+</button>
   )
-}
+})
